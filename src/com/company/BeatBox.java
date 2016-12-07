@@ -27,7 +27,12 @@ public class BeatBox {
     };
 
     public static void main(String[] args) {
-        new BeatBox().buldGUI();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new BeatBox().buldGUI();
+            }
+        });
     }
 
     private void buldGUI() {
